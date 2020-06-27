@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/result', to: 'cards#result'
   
   get '/about', to: 'page#about'
+  
+  delete '/cards/:id', to: 'cards#change'
 end

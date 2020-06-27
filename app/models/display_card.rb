@@ -1,3 +1,3 @@
 class DisplayCard < ApplicationRecord
-  validates :content, presence: true
+  validates :displaycon, presence: true, uniqueness: true
 end
