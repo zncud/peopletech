@@ -2,8 +2,8 @@
 
 one:
   id: 1
-  content: MyString
+  content: MyString1
 
 two:
-  id: 1
-  content: MyString
+  id: 2
+  content: MyString2

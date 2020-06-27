@@ -1,7 +1,7 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  displaycon: MyString
+  id: 1
+  displaycon: MyString1
 
 two:
-  displaycon: MyString
+  id: 2
+  displaycon: MyString2
