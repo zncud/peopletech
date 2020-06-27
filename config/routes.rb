@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'cards/new'
+
   root 'page#start'
 
   get '/play' , to: 'page#play'

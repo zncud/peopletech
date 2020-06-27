@@ -3,6 +3,7 @@ class PageController < ApplicationController
   end
 
   def play
+    @display = DisplayCard.all
   end
 
   def result
