@@ -1,0 +1,15 @@
+<%provide(:title, "Play")%>
+
+<ul class="cards">
+  <table>
+    <% @cards.each do |card| %>
+      <%= render card %>
+    <% end %>
+  </table>
+    
+    
+</ul>
+
+<button>
+  <%=link_to 'result' ,result_path %>
+</button>

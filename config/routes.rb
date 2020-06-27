@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   root 'page#start'
 
-  get '/play' , to: 'page#play'
+  get '/play' , to: 'cards#play'
 
-  get '/result', to: 'page#result'
+  get '/result', to: 'cards#result'
   
   get '/about', to: 'page#about'
 end
