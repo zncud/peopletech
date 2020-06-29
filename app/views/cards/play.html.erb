@@ -1,13 +1,14 @@
 <%provide(:title, "Play")%>
 
-<ul class="cards">
-  <table>
+<ul class="cards"">
+  <table align="center">
     <% @displaycards.each do |displaycard| %>
       <%= render displaycard %>
     <% end %>
   </table>
 </ul>
-
+<p class="sample" style="text-align:center;">
 <button>
   <%=link_to 'result' ,result_path %>
 </button>
+</p?

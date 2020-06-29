@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/about', to: 'page#about'
   
   delete '/cards/:id', to: 'cards#change'
+  
+  mount ActionCable.server => '/cable'
 end

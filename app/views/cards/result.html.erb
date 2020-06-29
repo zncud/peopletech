@@ -1,6 +1,6 @@
 <%provide(:title, "Result")%>
-
-
-
-
-
+    <% @displaycards.each do |displaycard| %>
+  <ul style="text-align:center;">
+    <%= displaycard.displaycon %>
+  </ul>
+<% end %>
