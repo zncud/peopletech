@@ -1,5 +1,4 @@
 class CardsController < ApplicationController
-  @@cnt=0
   def new
   end
   def play
@@ -10,14 +9,15 @@ class CardsController < ApplicationController
     @displaycards =DisplayCard.all
   end
   def change
-    n=Card.last.id-@@cnt
-    if(n!=5)
-      DisplayCard.find(params[:id]).update_attributes(displaycon: Card.find(n).content)
-      @@cnt=@@cnt+1
+
+      @leave=cookies[:card_ids].split("a");
+      @card_num=rand(0..@leave.size-1)
+      DisplayCard.find(params[:id]).update_attributes(displaycon: Card.find(@leave[@card_num]).content)
+      cookies[:card_ids]=cookies[:card_ids].sub("#{@leave[@card_num]}a","")
+    if cookies[:card_ids] != ""    
+      redirect_to play_path
     else
-      @@cnt=0
       redirect_to result_path
     end
-    
   end
 end
