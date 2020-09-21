@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   get 'cards/new'
 
   root 'page#start'
@@ -11,5 +12,4 @@ Rails.application.routes.draw do
   
   delete '/cards/:id', to: 'cards#change'
   
-  mount ActionCable.server => '/cable'
 end
